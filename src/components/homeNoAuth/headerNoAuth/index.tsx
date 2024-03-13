@@ -5,8 +5,7 @@ import next from "next";
 
 
 const HeaderNoAuth = function () {
-    return 
-    <>
+    return <>
         <div className={styles.ctaSection}>
             <img
                 src="/homeNoAuth/logoCta.png"
