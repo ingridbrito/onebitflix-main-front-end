@@ -1,21 +1,20 @@
 import api from "./api";
 
-export type EpisodeType ={
-    id:number;
+export type EpisodeType = {
+    id: number;
     name: string;
-    synopsis:string;
-    order:number;
+    synopsis: string;
+    order: number;
     videoUrl: string;
     secondsLong: number;
-}
-
-export type CourseType = {
-    id:number;
+  };
+  export type CourseType = {
+    id: number;
     name: string;
-    thubnailUrl:string;
-    synopsis:string;
-    episodes?:EpisodeType[];
-}
+    thumbnailUrl: string;
+    synopsis: string;
+    episodes?: EpisodeType[];
+  };
 
 const courseService = {
 getNewestCourse: async () => {
