@@ -15,7 +15,7 @@ const PresentationSection = function () {
                         Estude de onde estiver, a qualquer momento, e continue
                         <br /> evoluindo como programador
                     </p>
-                    <Link href="./register">
+                    <Link className={styles.link} href="./register">
                         {/* o botão irá direcionar para este link */}
                         <Button outline className={styles.btnCta}>
                             ACESSE AGORA
