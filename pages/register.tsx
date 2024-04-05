@@ -23,7 +23,7 @@ const Register = () => {
                     <p className={styles.formTitle}>
                         <strong>Bem-vindo(a) ao OneBitFlix!</strong>
                     </p>
-                    <Form className={styles.formTitle}>
+                    <Form className={styles.form}>
                         <p className="text-center">
                             <strong>Faça sua conta!</strong>
                         </p>
