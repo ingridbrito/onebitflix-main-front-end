@@ -30,7 +30,7 @@ const HeaderNoAuth = function () {
 
                 <Link href="/register">
                     <Button className={styles.navBtn} outline >
-                        Quero fazer parte
+                        Cadastro
                     </Button>
                 </Link>
 
