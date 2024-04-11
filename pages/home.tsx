@@ -3,6 +3,7 @@ import HeaderAuth from "@/src/components/common/headerAuth"
 import FavoriteCourses from "@/src/components/homeAuth/favoriteCategory"
 import FeaturedCategory from "@/src/components/homeAuth/featuredCategory"
 import FeaturedSection from "@/src/components/homeAuth/featuredSection"
+import ListCategories from "@/src/components/homeAuth/listCategories"
 import NewestCategory from "@/src/components/homeAuth/newestCategory"
 import Head from "next/head"
 import { useEffect } from "react"
@@ -20,6 +21,7 @@ const HomeAuth = function () {
                 <NewestCategory />
                 <FavoriteCourses />
                 <FeaturedCategory />
+                <ListCategories />
                 <br/>
                 <Footer />
             </main>
