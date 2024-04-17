@@ -42,7 +42,7 @@ const Search = function () {
                             ))}
                         </Container>
                     ) : (
-                        <p className={styles.noSearchResult}>Nenhum Resultado encontrado</p>
+                            <p className={styles.noSearchResult}>Nenhum Resultado encontrado</p>
                     )}
                 </section>
                 <div className={styles.footer}>
