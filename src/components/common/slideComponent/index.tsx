@@ -60,7 +60,8 @@ const SlideComponent: React.FC<props> = ({ course }: props) => {
 
             </div>
         </>
-    )
+    )            
+
 };
 
 export default SlideComponent;

@@ -13,9 +13,22 @@ import EpisodeList from "@/src/components/episodeList";
 const CoursePage = function () {
     const [course, setCourse] = useState<CourseType>();
     const router = useRouter()
+    const [loading, setLoading] = useState(true);
     const [liked, setLiked] = useState(false);
     const [favorited, setFavorited] = useState(false);
     const { id } = router.query;
+    
+    useEffect(() => {
+        if (!sessionStorage.getItem("onebitflix-token")) {
+          router.push("/login");
+        } else {
+          setLoading(false);
+        }
+      }, []);
+
+      if (loading) {
+        return <PageSpinner />;
+    }
 
     const getCourse = async function () {
         if (typeof id !== "string") return;
@@ -54,6 +67,8 @@ const CoursePage = function () {
             setFavorited(true);
         }
     };
+
+
 
     if (course === undefined) return <PageSpinner />
 

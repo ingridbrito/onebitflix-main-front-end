@@ -8,17 +8,20 @@ import { useRouter } from "next/router";
 import ToastComponent from "@/src/components/common/toast";
 import { FormEvent, useEffect, useState } from "react";
 import authService from "@/src/services/authService";
+import PageSpinner from "@/src/components/common/spinner";
 
 
 const Login = function () {
 
     const router = useRouter();
+    const [loading, setLoading] = useState(true);
+
     const [toastColor, setToastColor] = useState("");
     const [toastIsOpen, setToastIsOpen] = useState(false);
     const [toastMessage, setToastMessage] = useState("");
 
     useEffect(() => {
-        if (sessionStorage.getItem("onebitflix-toke")){
+        if (sessionStorage.getItem("onebitflix-token")){
             router.push("/home")
         }
     }, []);
@@ -37,6 +40,9 @@ const Login = function () {
         }
     }, [router.query]);
 
+    if (loading) {
+        return <PageSpinner />;
+    }
 
 const handleLogin = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
